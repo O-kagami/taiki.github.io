@@ -6,125 +6,83 @@
 <meta name="description" content="Taiki Kojima — a collection of personal projects, experiments and notes.">
 <meta name="theme-color" content="#ffffff">
 <title>taiki — personal portfolio</title>
-<style>
-:root{--ink:#659fc8;--rule:#8bbddd;--focus:#215d85;--paper:#fff;--body:#314b5e}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Trebuchet MS",Arial,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
-a{color:inherit;text-decoration:none}button{font:inherit}
-a:hover{text-decoration:underline;text-underline-offset:.18em}
-a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offset:-4px}
-.skip{position:absolute;top:0;left:0;z-index:10;background:white;padding:12px;transform:translateY(-120%)}.skip:focus{transform:none}
-.identity{min-height:clamp(320px,34vw,580px);display:flex;align-items:center;padding:64px 5.55vw 52px}
-.identity-inner{padding-top:40px}
-.wordmark{font-size:clamp(38px,4.1vw,66px);font-weight:500;letter-spacing:-.08em;line-height:1;margin:0 0 24px;display:inline-block}
-.nav{font-size:clamp(19px,1.65vw,25px);line-height:1.65;letter-spacing:-.035em}
-.nav a{display:inline-block}.nav div{width:max-content}
-.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:25vw;grid-auto-flow:row dense;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
-.tile{position:relative;display:grid;place-items:center;min-width:0;min-height:0;overflow:hidden;border:0;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:white;padding:12%;cursor:pointer;color:var(--ink);text-align:left}
-.tile.large{grid-column:span 2;grid-row:span 2;padding:12%}
-.art{display:block;width:100%;height:100%;object-fit:contain;transition:transform .24s ease,opacity .24s ease}
-.tile:hover .art,.tile:focus-visible .art{transform:scale(.95)}
-.tile:hover{text-decoration:none}
-.tile .hint{position:absolute;left:12px;bottom:10px;font-size:11px;letter-spacing:.04em;opacity:0;transition:opacity .15s;background:#fff;padding:4px 6px}
-.tile:hover .hint,.tile:focus-visible .hint{opacity:1}
-.art svg{display:block;width:100%;height:100%}
-.type-art{display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;line-height:1;letter-spacing:-.07em;font-weight:700}
-.type-art .small{font-size:clamp(10px,1vw,17px);font-weight:400;letter-spacing:.08em;margin-top:12px}
-.hask{color:#465eae;font-size:clamp(25px,5.4vw,86px)}
-.weather{color:#387cbc;font-size:clamp(22px,3.7vw,58px);font-weight:500}
-.audio{color:#202532;font-size:clamp(22px,3.4vw,55px)}
-.trace{color:#325e4a;font-size:clamp(20px,3.3vw,54px)}
-.lab{color:#294c74;font-size:clamp(18px,2.9vw,48px);letter-spacing:-.035em}
-.ime{color:#272c35;font-size:clamp(30px,6vw,92px)}
-.about{padding:clamp(48px,8vw,115px) 5.55vw;max-width:1000px;line-height:1.85}
-.about h2{font-weight:500;font-size:clamp(30px,4vw,48px);letter-spacing:-.045em;margin:0 0 22px}
-.about p{color:var(--body);max-width:650px;font-size:16px}
-.about .english{font-size:14px}
-footer{border-top:1px solid var(--rule);padding:28px 5.55vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:14px}
-dialog{border:1px solid var(--rule);padding:0;width:min(640px,calc(100% - 32px));max-height:85dvh;background:#fff;color:var(--body)}
-dialog::backdrop{background:rgba(24,58,80,.3)}
-.detail{padding:clamp(24px,5vw,48px)}
-.detail h2{color:var(--focus);font-size:clamp(27px,5vw,40px);line-height:1.15;margin:20px 0;letter-spacing:-.04em}
-.detail p{line-height:1.8;margin:0 0 20px}
-.detail .kind{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--focus)}
-.close{border:1px solid var(--rule);background:white;color:var(--focus);padding:8px 12px;float:right;cursor:pointer}
-.detail a{color:var(--focus);text-decoration:underline}
-@media(max-width:700px){.identity{min-height:200px;padding:38px 8.2vw 28px;align-items:flex-start}.identity-inner{padding-top:0}.wordmark{font-size:37px;margin-bottom:14px}.nav{font-size:17px;line-height:1.5}.wall{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:50vw}.tile,.tile.large{padding:10%}.hask{font-size:8vw}.weather,.audio,.trace{font-size:6vw}.lab{font-size:5vw}.ime{font-size:10vw}.type-art .small{font-size:10px}.tile .hint{display:none}.about{padding-inline:8.2vw}footer{padding-inline:8.2vw}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.art,.hint{transition:none}}
-</style>
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<a class="skip" href="#works">作品一覧へ移動</a>
-<header class="identity" id="top">
-<div class="identity-inner">
-<h1 class="wordmark"><a href="#top">taiki.</a></h1>
-<nav class="nav" aria-label="Main navigation">
-<div><a href="#about">about me</a></div>
-<div><a href="#works">works / experiments</a></div>
-<div><a href="https://github.com/O-kagami">GitHub</a></div>
-</nav>
-</div>
-</header>
-<main id="works" aria-label="Selected works and experiments">
-<section class="wall" aria-label="Projects">
-<a class="tile" href="#haskapp" data-project="haskapp" aria-label="Haskapp — wordmark"><div class="art type-art hask">haskapp<span class="small">CAMPUS / TIMETABLE</span></div><span class="hint">Haskapp / 01</span></a>
-<a class="tile" href="#haskapp" data-project="haskapp" aria-label="Haskapp — timetable concept"><div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Original timetable illustration"><rect x="42" y="12" width="156" height="216" rx="23" fill="#f3f5fb" stroke="#465eae" stroke-width="2"/><rect x="92" y="20" width="56" height="6" rx="3" fill="#465eae"/><text x="57" y="54" font-size="16" font-weight="bold" fill="#465eae">Today</text><g stroke="#d8def0" stroke-width="1"><path d="M57 68H183M57 96H183M57 124H183M57 152H183M57 180H183M82 68V194M107 68V194M132 68V194M157 68V194"/></g><g fill="#899cdb"><rect x="60" y="72" width="19" height="21" rx="3"/><rect x="110" y="100" width="19" height="49" rx="3"/><rect x="135" y="156" width="19" height="21" rx="3"/></g><g fill="#a9c7c0"><rect x="85" y="100" width="19" height="21" rx="3"/><rect x="160" y="72" width="19" height="49" rx="3"/><rect x="60" y="156" width="19" height="21" rx="3"/></g><rect x="83" y="209" width="74" height="3" rx="2" fill="#465eae"/></svg></div><span class="hint">Haskapp / 02</span></a>
-<a class="tile" href="#haskapp" data-project="haskapp" aria-label="Haskapp — symbol study"><div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Original abstract H symbol"><g fill="none" stroke="#465eae" stroke-width="22" stroke-linecap="round"><path d="M67 53v134M173 53v134M67 120h106"/></g><circle cx="120" cy="120" r="16" fill="#90b4e9" stroke="white" stroke-width="4"/></svg></div><span class="hint">Haskapp / 03</span></a>
-<a class="tile" href="#weather" data-project="weather" aria-label="Fluent Weather — weather symbols"><div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Original sun and cloud symbols"><circle cx="105" cy="88" r="39" fill="#f4c761"/><g stroke="#f4c761" stroke-width="4" stroke-linecap="round"><path d="M105 28V14M105 162v-14M45 88H31M179 88h-14M63 46 52 35M147 130l11 11M147 46l11-11M63 130l-11 11"/></g><path d="M78 172a33 33 0 0 1 1-66 43 43 0 0 1 83 5 31 31 0 0 1 1 61Z" fill="#e5f2fb" stroke="#387cbc" stroke-width="3"/><g stroke="#387cbc" stroke-width="4" stroke-linecap="round"><path d="m100 187-9 15m36-15-9 15m36-15-9 15"/></g></svg></div><span class="hint">Fluent Weather / 01</span></a>
-<a class="tile large" href="#weather" data-project="weather" aria-label="Fluent Weather — dashboard concept"><div class="art"><svg viewBox="0 0 480 480" role="img" aria-label="Original weather dashboard concept"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#d4e9f9"/><stop offset="1" stop-color="#f5f9fc"/></linearGradient></defs><rect x="26" y="60" width="428" height="360" rx="16" fill="url(#sky)" stroke="#8eb8db"/><rect x="26" y="60" width="428" height="34" rx="16" fill="#f9fcff"/><g fill="#87b4d4"><circle cx="42" cy="77" r="4"/><circle cx="55" cy="77" r="4"/><circle cx="68" cy="77" r="4"/></g><g fill="#275e8d" font-family="Arial,sans-serif"><text x="52" y="122" font-size="12" letter-spacing="2">FLUENT WEATHER</text><text x="52" y="155" font-size="22">Sapporo</text><text x="52" y="230" font-size="70">12°</text><text x="56" y="255" font-size="15">Partly cloudy</text></g><circle cx="350" cy="174" r="41" fill="#f3c65a"/><path d="M304 221a30 30 0 1 1 2-60 41 41 0 0 1 78 9 27 27 0 0 1 0 51Z" fill="#fff" stroke="#a6c9e4"/><rect x="48" y="278" width="384" height="115" rx="10" fill="#fff" opacity=".8"/><g stroke="#d7e8f4" stroke-width="1"><path d="M65 307H415M65 331H415M65 355H415"/></g><path d="M65 347Q106 349 125 330T188 315T250 328T316 304T379 322L415 343" stroke="#4b91c6" fill="none" stroke-width="3"/><g fill="#507b9b" font-size="10"><text x="65" y="380">09:00</text><text x="151" y="380">12:00</text><text x="235" y="380">15:00</text><text x="320" y="380">18:00</text><text x="390" y="380">21:00</text></g></svg></div><span class="hint">Fluent Weather / 02</span></a>
-<a class="tile" href="#weather" data-project="weather" aria-label="Fluent Weather — typography"><div class="art type-art weather">Fluent<br>Weather<span class="small">WINDOWS / WEATHER</span></div><span class="hint">Fluent Weather / 03</span></a>
-<a class="tile" href="#audio" data-project="audio" aria-label="Audio Tracker — waveform"><div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Original audio waveform"><g stroke="#232a3a" stroke-width="7" stroke-linecap="round"><path d="M20 111v18M36 100v40M52 78v84M68 93v54M84 45v150M100 68v104M116 29v182M132 62v116M148 85v70M164 54v132M180 97v46M196 80v80M212 105v30"/></g><path d="M12 120H228" stroke="#87c7dd" stroke-width="1"/></svg></div><span class="hint">Audio Tracker / 01</span></a>
-<a class="tile" href="#audio" data-project="audio" aria-label="Audio Tracker — typography"><div class="art type-art audio">Audio<br>Tracker<span class="small">iOS / AUDIO</span></div><span class="hint">Audio Tracker / 02</span></a>
-<a class="tile" href="#trace" data-project="trace" aria-label="Trace Log — route illustration"><div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Original abstract route map"><rect x="12" y="12" width="216" height="216" fill="#f1f5ef"/><g fill="none" stroke="#c8d9cc" stroke-width="9"><path d="M20 57 95 62 168 15M20 180l77-45 131 28M64 15 93 82l-8 146M174 24l-15 204M12 111l216-9"/></g><path d="M44 180C40 144 98 163 103 127S92 75 143 72 189 55 198 40" fill="none" stroke="#426e55" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 9"/><g fill="#426e55" stroke="white" stroke-width="3"><circle cx="44" cy="180" r="8"/><circle cx="103" cy="127" r="8"/><circle cx="143" cy="72" r="8"/><circle cx="198" cy="40" r="8"/></g></svg></div><span class="hint">Trace Log / 01</span></a>
-<a class="tile" href="#trace" data-project="trace" aria-label="Trace Log — typography"><div class="art type-art trace">trace<br>log.<span class="small">iOS / TIMELINE</span></div><span class="hint">Trace Log / 02</span></a>
-<a class="tile large" href="#trace" data-project="trace" aria-label="Trace Log — timeline concept"><div class="art"><svg viewBox="0 0 480 480" role="img" aria-label="Original timeline interface concept"><rect x="124" y="15" width="232" height="450" rx="34" fill="#f7f9f5" stroke="#416d58" stroke-width="2"/><rect x="204" y="25" width="72" height="9" rx="5" fill="#416d58"/><g font-family="Arial,sans-serif" fill="#355748"><text x="145" y="74" font-size="13" letter-spacing="2">TRACE LOG</text><text x="145" y="108" font-size="27" font-weight="bold">A day in motion.</text></g><rect x="145" y="129" width="190" height="124" rx="12" fill="#e0eadf"/><g stroke="#b8d0bf" stroke-width="7" fill="none"><path d="M150 153l76 30 100-26M172 129l44 122M310 129l-45 124M149 226l186-40"/></g><path d="M169 218C194 174 216 224 240 181S292 173 312 145" fill="none" stroke="#416d58" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 7"/><g fill="#416d58" stroke="white" stroke-width="3"><circle cx="169" cy="218" r="7"/><circle cx="240" cy="181" r="7"/><circle cx="312" cy="145" r="7"/></g><path d="M161 279V414" stroke="#8ab19b" stroke-width="2"/><g fill="#416d58"><circle cx="161" cy="290" r="5"/><circle cx="161" cy="344" r="5"/><circle cx="161" cy="398" r="5"/></g><g fill="#355748" font-size="15"><text x="180" y="292">Morning</text><text x="180" y="346">Afternoon</text><text x="180" y="400">Evening</text></g><g fill="#7b9082" font-size="11"><text x="180" y="309">09:00 — 11:30</text><text x="180" y="363">12:30 — 16:00</text><text x="180" y="417">18:00 — 21:00</text></g></svg></div><span class="hint">Trace Log / 03</span></a>
-<a class="tile" href="#ime" data-project="ime" aria-label="IME experiments — typography"><div class="art type-art ime">あ/A<span class="small">INPUT / EXPERIMENTS</span></div><span class="hint">IME experiments / 01</span></a>
-<a class="tile" href="#ime" data-project="ime" aria-label="IME experiments — key diagram"><div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Original keyboard diagram"><g fill="#f1f2f4" stroke="#444a54" stroke-width="2"><rect x="18" y="70" width="60" height="60" rx="10"/><rect x="90" y="70" width="60" height="60" rx="10"/><rect x="162" y="70" width="60" height="60" rx="10"/><rect x="54" y="142" width="132" height="42" rx="10"/></g><g font-size="30" text-anchor="middle" fill="#444a54"><text x="48" y="109">A</text><text x="120" y="109">あ</text><text x="192" y="109">↵</text></g><text x="120" y="168" font-size="12" text-anchor="middle" fill="#444a54">SPACE</text></svg></div><span class="hint">IME experiments / 02</span></a>
-<a class="tile" href="#study" data-project="study" aria-label="Engineering studies — circuit"><div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Original abstract electrical circuit"><g fill="none" stroke="#315d87" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M35 120V55h53l7-12 12 24 12-24 12 24 12-24 7 12h55v65M35 120v65h170v-65"/><circle cx="35" cy="120" r="19" fill="white"/><path d="M24 120q6-13 11 0t11 0M205 100v12m-16 0h32m-32 10h32m-16 0v18"/></g><path d="M74 148Q95 93 120 148T167 148" stroke="#8eb6d6" fill="none" stroke-width="3"/><text x="120" y="222" text-anchor="middle" font-size="11" letter-spacing="2" fill="#315d87">ENGINEERING</text></svg></div><span class="hint">Engineering / 01</span></a>
-<a class="tile" href="#study" data-project="study" aria-label="Engineering studies — typography"><div class="art type-art lab">systems<br>&amp; signals<span class="small">ENGINEERING / STUDY</span></div><span class="hint">Engineering / 02</span></a>
-<a class="tile" href="#about" aria-label="About Taiki"><div class="art type-art" style="font-size:clamp(28px,5vw,74px);font-weight:500">hello.<span class="small">ABOUT ME ↗</span></div><span class="hint">About</span></a>
-<a class="tile" href="https://github.com/O-kagami" aria-label="GitHub profile"><div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Original code bracket illustration"><g fill="none" stroke="#659fc8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M84 72 36 120l48 48m72-96 48 48-48 48m-14-113-44 130"/></g></svg></div><span class="hint">GitHub ↗</span></a>
-</section>
-<section class="about" id="about">
-<h2>about me.</h2>
-<p>小島大輝 / Taiki Kojima</p>
-<p>北海道大学で工学を学びながら、日常の小さな課題を解決するアプリやインターフェースを制作しています。このサイトは、個人開発や学び、実験をまとめる場所です。</p>
-<p class="english" lang="en">I study engineering at Hokkaido University and explore software, interfaces, and everyday tools through personal projects.</p>
-<p><a href="https://github.com/O-kagami">GitHub ↗</a></p>
-</section>
-<section class="about" id="project-notes" aria-label="Project notes">
-<h2>project notes.</h2>
-<p>掲載ビジュアルはポートフォリオ用に制作したコンセプト図であり、実際のアプリ画面や公式ロゴとは異なる場合があります。</p>
-<article id="haskapp"><h3>Haskapp</h3><p>大学生活の時間割や授業情報を扱うアプリの個人開発。</p></article>
-<article id="weather"><h3>Fluent Weather</h3><p>Windows向けの天気情報アプリ。日常に馴染むインターフェースの探究。</p></article>
-<article id="audio"><h3>Audio Tracker</h3><p>iOS向けのオーディオに関する個人開発プロジェクト。</p></article>
-<article id="trace"><h3>Trace Log</h3><p>一日の移動や滞在を振り返るためのタイムラインの探究。</p></article>
-<article id="ime"><h3>IME experiments</h3><p>文字入力とキーボード操作に関するWindows向けの実験。</p></article>
-<article id="study"><h3>Engineering studies</h3><p>電気・情報・システム工学の学習と実験。</p></article>
-</section>
-</main>
-<footer><span>© Taiki Kojima</span><a href="#top">back to top ↑</a></footer>
-<dialog id="project-dialog" aria-labelledby="detail-title"><div class="detail"><button class="close" type="button">close ×</button><div class="kind">project / experiment</div><h2 id="detail-title"></h2><p id="detail-description"></p><a id="detail-link" href="#project-notes">project notes ↓</a></div></dialog>
-<script>
-const dialog=document.querySelector('#project-dialog');
-if(typeof dialog.showModal==='function'){
-let previous=null;
-document.querySelectorAll('[data-project]').forEach(tile=>tile.addEventListener('click',event=>{
-if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
-const article=document.getElementById(tile.dataset.project);
-if(!article)return;
-event.preventDefault();previous=tile;
-document.querySelector('#detail-title').textContent=article.querySelector('h3').textContent;
-document.querySelector('#detail-description').textContent=article.querySelector('p').textContent;
-document.querySelector('#detail-link').href='#'+article.id;
-dialog.showModal();
-}));
-dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
-dialog.querySelector('#detail-link').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
-dialog.addEventListener('close',()=>previous?.focus({preventScroll:true}));
-}
-</script>
+  <a class="skip" href="#works">作品一覧へ移動</a>
+  <header class="identity" id="top">
+    <div class="identity-inner">
+      <h1 class="wordmark"><a href="#top" lang="en">taiki.</a></h1>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="./about.html" lang="en">about me</a>
+        <a href="#works" lang="en">works / experiments</a>
+        <a href="https://github.com/O-kagami" lang="en">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="works" tabindex="-1">
+    <section aria-labelledby="works-title">
+      <h2 class="section-label works-title" id="works-title" lang="en">selected works.</h2>
+      <div class="wall">
+        <article class="project project--featured" id="weather">
+          <a class="project-preview" href="./assets/fluent-weather.jpg">
+            <img src="./assets/fluent-weather.jpg" width="1200" height="780"
+                 alt="Fluent Weather App：天気予報、気温の推移、雨雲レーダーを表示する画面">
+            <span class="preview-hint">拡大 ↗</span>
+          </a>
+          <div class="project-copy">
+            <span class="section-label" lang="en">Windows</span>
+            <h3 lang="en">Fluent Weather App</h3>
+            <p>天気予報や気温の推移、雨雲レーダーをひとつの画面で確認できる、Windows向けの天気アプリ。</p>
+            <a class="text-link" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP" lang="en">Microsoft Store ↗</a>
+          </div>
+        </article>
+
+        <article class="project" id="audio">
+          <a class="project-preview" href="./assets/audio-tracker.webp">
+            <img src="./assets/audio-tracker.webp" width="640" height="1391"
+                 alt="Audio Tracker：地図と現在の音声出力先を表示する画面">
+            <span class="preview-hint">拡大 ↗</span>
+          </a>
+          <div class="project-copy">
+            <span class="section-label" lang="en">iOS / iPadOS</span>
+            <h3 lang="en">Audio Tracker</h3>
+            <p>イヤホンやスピーカーの接続履歴を地図とタイムラインで振り返るアプリ。</p>
+            <a class="text-link" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273" lang="en">App Store ↗</a>
+          </div>
+        </article>
+
+        <article class="project" id="trace">
+          <a class="project-preview" href="./assets/trace-log.jpg">
+            <img src="./assets/trace-log.jpg" width="640" height="1391"
+                 alt="Trace Log：移動や滞在を地図と一覧で振り返るサンプルタイムライン">
+            <span class="preview-hint">拡大 ↗</span>
+          </a>
+          <div class="project-copy">
+            <span class="section-label" lang="en">iOS</span>
+            <h3 lang="en">Trace Log</h3>
+            <p>歩いた道や立ち寄った場所、写真や曲を、一日のタイムラインで振り返るアプリ。</p>
+            <a class="text-link" href="https://o-kagami.github.io/tracelog-support/">サポート ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="experiments" id="project-notes" aria-labelledby="experiments-title">
+      <h2 class="section-label" id="experiments-title" lang="en">experiments / studies.</h2>
+      <div class="experiment-list">
+        <article id="ime">
+          <h3 lang="en">IME experiments</h3>
+          <p>文字入力とキーボード操作に関するWindows向けの実験。</p>
+        </article>
+        <article id="study">
+          <h3 lang="en">Engineering studies</h3>
+          <p>電気・情報・システム工学の学習と実験。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer><span>© Taiki Kojima</span><a href="#top" lang="en">back to top ↑</a></footer>
 </body>
 </html>

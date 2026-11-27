@@ -1,14 +1,14 @@
 # taiki.
 
-A personal portfolio, built as a dependency-free static site (HTML, CSS and JavaScript).
+A personal portfolio, built as a dependency-free static site (HTML and CSS).
 
 ## Design
 
-Visual inspiration: https://www.not-here.jp/ — a white canvas, thin blue grid lines, generous opening whitespace, and a responsive mosaic of project visuals. The implementation and illustrations are original; no third-party artwork, source code, or proprietary fonts are included. The app illustrations are concepts, not verified screenshots or official logos.
+Visual inspiration: https://www.not-here.jp/ — a white canvas, thin blue grid lines, generous opening whitespace, and a responsive grid of project screenshots.
 
 ## Preview locally
 
-Open `index.html` in a browser, or run `python -m http.server 8000` in the repository and open http://localhost:8000/.
+Open `index.html` in a browser, or run `python3 -m http.server 8000` in the repository and open http://localhost:8000/.
 
 ## GitHub Pages
 
@@ -16,4 +16,6 @@ In Settings → Pages, select **Deploy from a branch**, then `main` and `/ (root
 
 ## Editing
 
-`index.html` contains the responsive layout, inline SVG concept illustrations, project notes, and accessible project dialogs. Replace the concept illustrations with actual project assets as they become available. All asset references are local or inline; the site works from a repository subdirectory.
+- `index.html` holds the project grid and text notes for experiments and studies. The grid uses local copies of the Fluent Weather App Microsoft Store screenshot, the Audio Tracker App Store screenshot, and the Trace Log sample timeline screenshot.
+- `about.html` holds the profile and career timeline. Use `datetime="YYYY-MM"` for dated entries and keep the newest entries first.
+- `styles.css` holds the shared layout and typography. Use document-relative paths for links and assets so the site also works from a GitHub Pages repository subdirectory.
