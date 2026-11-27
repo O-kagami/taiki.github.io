@@ -22,54 +22,175 @@
   </header>
 
   <main id="works" tabindex="-1">
-    <section aria-labelledby="works-title">
-      <h2 class="section-label works-title" id="works-title" lang="en">selected works.</h2>
-      <div class="wall">
-        <article class="project project--featured" id="weather">
-          <a class="project-preview" href="./assets/fluent-weather.jpg">
-            <img src="./assets/fluent-weather.jpg" width="1200" height="780"
-                 alt="Fluent Weather App：天気予報、気温の推移、雨雲レーダーを表示する画面">
-            <span class="preview-hint">拡大 ↗</span>
-          </a>
-          <div class="project-copy">
-            <span class="section-label" lang="en">Windows</span>
-            <h3 lang="en">Fluent Weather App</h3>
-            <p>天気予報や気温の推移、雨雲レーダーをひとつの画面で確認できる、Windows向けの天気アプリ。</p>
-            <a class="text-link" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP" lang="en">Microsoft Store ↗</a>
+    <section class="wall" aria-label="作品ギャラリー">
+      <a class="tile tile--large" href="#weather">
+        <img src="./assets/fluent-weather.jpg" width="1200" height="780"
+             alt="天気予報、気温の推移、雨雲レーダーを表示する画面">
+        <span class="tile-label" lang="en">Fluent Weather App / 01</span>
+      </a>
+      <a class="tile" href="#audio">
+        <img src="./assets/audio-tracker.webp" width="640" height="1391"
+             alt="iPhoneで地図と現在の音声出力先を表示する画面">
+        <span class="tile-label" lang="en">Audio Tracker / 01</span>
+      </a>
+      <a class="tile" href="#trace">
+        <img src="./assets/trace-log.jpg" width="640" height="1391"
+             alt="移動や滞在を地図と一覧で振り返るサンプルタイムライン">
+        <span class="tile-label" lang="en">Trace Log / 01</span>
+      </a>
+      <a class="tile tile--mark" href="#weather">
+        <img src="./assets/fluent-weather-icon.png" width="300" height="300" alt="" loading="lazy">
+        <span class="tile-label" lang="en">Fluent Weather App / icon</span>
+      </a>
+      <a class="tile tile--mark" href="#audio">
+        <img src="./assets/audio-tracker-icon.jpg" width="256" height="256" alt="" loading="lazy">
+        <span class="tile-label" lang="en">Audio Tracker / icon</span>
+      </a>
+
+      <a class="tile tile--mark" href="#hokudai-guide">
+        <span class="word-art" lang="en" aria-hidden="true">
+          HOKUDAI<br>GUIDE<small>UNOFFICIAL CAMPUS GUIDE</small>
+        </span>
+        <span class="tile-label" lang="en">HOKUDAI GUIDE / wordmark</span>
+      </a>
+      <a class="tile" href="#weather">
+        <img src="./assets/fluent-weather-settings.jpg" width="1000" height="633" loading="lazy"
+             alt="表示言語やテーマ、天気の単位を選べる設定画面">
+        <span class="tile-label" lang="en">Fluent Weather App / 02</span>
+      </a>
+      <a class="tile tile--large" href="#hokudai-guide">
+        <img src="./assets/hokudai-guide.jpg" width="1120" height="720" loading="lazy"
+             alt="「北大を歩く。」の見出しとキャンパスのイラストがあるトップ画面">
+        <span class="tile-label" lang="en">HOKUDAI GUIDE / 01</span>
+      </a>
+      <a class="tile tile--mark" href="#trace">
+        <img src="./assets/trace-log-icon.png" width="120" height="120" alt="" loading="lazy">
+        <span class="tile-label" lang="en">Trace Log / icon</span>
+      </a>
+      <a class="tile" href="#audio">
+        <img src="./assets/audio-tracker-ipad.webp" width="960" height="1280" loading="lazy"
+             alt="iPadで自動記録、通知、権限を確認する設定画面">
+        <span class="tile-label" lang="en">Audio Tracker / 02</span>
+      </a>
+
+      <a class="tile tile--large" href="#odekake">
+        <img src="./assets/odekake.jpg" width="1120" height="720" loading="lazy"
+             alt="行き先の選択と持ち物チェックができるパソコンでの画面">
+        <span class="tile-label">おでかけノート / 01</span>
+      </a>
+      <a class="tile tile--mark" href="#odekake">
+        <span class="word-art word-art--odekake" aria-hidden="true">
+          おでかけ<br>ノート<small lang="en">ODEKAKE NOTE</small>
+        </span>
+        <span class="tile-label">おでかけノート / ロゴ</span>
+      </a>
+      <a class="tile" href="#hokudai-guide">
+        <img src="./assets/hokudai-campuses.jpg" width="1120" height="682" loading="lazy"
+             alt="札幌と函館のキャンパスを紹介する画面">
+        <span class="tile-label" lang="en">HOKUDAI GUIDE / 02</span>
+      </a>
+      <a class="tile" href="#trace">
+        <img src="./assets/trace-log-record.jpg" width="640" height="1391" loading="lazy"
+             alt="移動の記録を始める画面">
+        <span class="tile-label" lang="en">Trace Log / 02</span>
+      </a>
+      <a class="tile" href="#odekake">
+        <img src="./assets/odekake-mobile.jpg" width="440" height="760" loading="lazy"
+             alt="スマートフォンで持ち物にチェックを入れた画面">
+        <span class="tile-label">おでかけノート / 02</span>
+      </a>
+      <a class="tile tile--mark" href="./about.html">
+        <span class="word-art word-art--about" lang="en" aria-hidden="true">
+          hello.<small>ABOUT ME ↗</small>
+        </span>
+        <span class="tile-label" lang="en">About me</span>
+      </a>
+    </section>
+
+    <section class="content-section" id="project-notes" aria-labelledby="projects-title">
+      <h2 class="section-label" id="projects-title" lang="en">project notes.</h2>
+      <div class="project-list">
+        <article class="project" id="weather" aria-labelledby="weather-title" tabindex="-1">
+          <div class="project-platforms" lang="en">
+            <svg viewBox="0 0 24 24" role="img" fill="currentColor">
+              <title>Windows</title>
+              <path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/>
+            </svg>
+          </div>
+          <h3 id="weather-title" lang="en">Fluent Weather App</h3>
+          <p>天気予報や気温の推移、雨雲レーダーをひとつの画面で確認できる、Windows向けの天気アプリ。</p>
+          <div class="project-links">
+            <a class="project-action" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP" lang="en">
+              Microsoft Store <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </article>
 
-        <article class="project" id="audio">
-          <a class="project-preview" href="./assets/audio-tracker.webp">
-            <img src="./assets/audio-tracker.webp" width="640" height="1391"
-                 alt="Audio Tracker：地図と現在の音声出力先を表示する画面">
-            <span class="preview-hint">拡大 ↗</span>
-          </a>
-          <div class="project-copy">
-            <span class="section-label" lang="en">iOS / iPadOS</span>
-            <h3 lang="en">Audio Tracker</h3>
-            <p>イヤホンやスピーカーの接続履歴を地図とタイムラインで振り返るアプリ。</p>
-            <a class="text-link" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273" lang="en">App Store ↗</a>
+        <article class="project" id="audio" aria-labelledby="audio-title" tabindex="-1">
+          <div class="project-platforms" lang="en">
+            <svg viewBox="0 0 24 24" role="img" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+              <title>iPhone</title>
+              <rect x="6.5" y="2" width="11" height="20" rx="2.25"/>
+              <path d="M10.5 5h3"/>
+            </svg>
+            <svg viewBox="0 0 24 24" role="img" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+              <title>iPad</title>
+              <rect x="3.5" y="2" width="17" height="20" rx="2.25"/>
+              <path d="M10.5 19h3"/>
+            </svg>
+          </div>
+          <h3 id="audio-title" lang="en">Audio Tracker</h3>
+          <p>イヤホンやスピーカーの接続履歴を地図とタイムラインで振り返るアプリ。</p>
+          <div class="project-links">
+            <a class="project-action" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273" lang="en">
+              App Store <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </article>
 
-        <article class="project" id="trace">
-          <a class="project-preview" href="./assets/trace-log.jpg">
-            <img src="./assets/trace-log.jpg" width="640" height="1391"
-                 alt="Trace Log：移動や滞在を地図と一覧で振り返るサンプルタイムライン">
-            <span class="preview-hint">拡大 ↗</span>
-          </a>
-          <div class="project-copy">
-            <span class="section-label" lang="en">iOS</span>
-            <h3 lang="en">Trace Log</h3>
-            <p>歩いた道や立ち寄った場所、写真や曲を、一日のタイムラインで振り返るアプリ。</p>
-            <a class="text-link" href="https://o-kagami.github.io/tracelog-support/">サポート ↗</a>
+        <article class="project" id="trace" aria-labelledby="trace-title" tabindex="-1">
+          <div class="project-platforms" lang="en">
+            <svg viewBox="0 0 24 24" role="img" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+              <title>iPhone</title>
+              <rect x="6.5" y="2" width="11" height="20" rx="2.25"/>
+              <path d="M10.5 5h3"/>
+            </svg>
+          </div>
+          <h3 id="trace-title" lang="en">Trace Log</h3>
+          <p>歩いた道や立ち寄った場所、写真や曲を、一日のタイムラインで振り返るアプリ。</p>
+          <div class="project-links">
+            <span class="project-status" lang="en">coming soon</span>
+          </div>
+        </article>
+
+        <article class="project" id="hokudai-guide" aria-labelledby="hokudai-guide-title" tabindex="-1">
+          <span class="section-label" lang="en">Web / Campus guide</span>
+          <h3 id="hokudai-guide-title" lang="en">HOKUDAI GUIDE</h3>
+          <p>北海道大学の歴史や、札幌・函館キャンパスの見どころを紹介する非公式ガイド。</p>
+          <div class="project-links">
+            <a class="project-action" href="https://github.com/O-kagami/hokudai-guide" lang="en">
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" id="odekake" aria-labelledby="odekake-title" tabindex="-1">
+          <span class="section-label" lang="en">Web / Learning</span>
+          <h3 id="odekake-title">おでかけノート</h3>
+          <p>行き先を選んで持ち物をチェックする小さなWebアプリ。初心者向けAIアプリ制作講座の公開教材です。</p>
+          <div class="project-links">
+            <a class="project-action" href="https://o-kagami.github.io/odekake/">
+              公開デモ <span aria-hidden="true">↗</span>
+            </a>
+            <a class="project-action" href="https://github.com/O-kagami/odekake" lang="en">
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="experiments" id="project-notes" aria-labelledby="experiments-title">
+    <section class="content-section" id="experiments" aria-labelledby="experiments-title">
       <h2 class="section-label" id="experiments-title" lang="en">experiments / studies.</h2>
       <div class="experiment-list">
         <article id="ime">
