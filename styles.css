@@ -71,8 +71,9 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
   transform-origin: left;
   transition: transform .24s ease;
 }
-.nav a[aria-current="page"]::after { transform: scaleX(.35); }
-.nav a:hover::after, .nav a:focus-visible::after { transform: scaleX(1); }
+.nav a[aria-current="page"]::after,
+.nav a:hover::after,
+.nav a:focus-visible::after { transform: scaleX(1); }
 
 .section-label {
   margin: 0;
