@@ -84,11 +84,14 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
 }
 .icon-library { position: absolute; }
 .wall {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-auto-rows: 25vw;
   border-block-start: 1px solid var(--rule);
   border-inline-start: 1px solid var(--rule);
+}
+.project-tiles {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-auto-rows: min(21vw, 18rem);
+  scroll-margin-block-start: 1rem;
 }
 .tile {
   min-width: 0;
@@ -96,12 +99,8 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
   padding: clamp(.35rem, 1vw, 1rem);
   border-inline-end: 1px solid var(--rule);
   border-block-end: 1px solid var(--rule);
-  scroll-margin-block-start: 1rem;
 }
-.tile--large {
-  grid-column: span 2;
-  grid-row: span 2;
-}
+.tile--large { grid-row: span 2; }
 .tile-face {
   display: grid;
   grid-template: minmax(0, 1fr) auto / minmax(0, 1fr);
@@ -113,6 +112,12 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
   background: var(--paper);
 }
 .tile--large .tile-face { padding: clamp(.7rem, 3vw, 3.25rem); }
+.tile-media {
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  place-items: center;
+  place-self: stretch;
+}
 .tile-art {
   display: block;
   width: auto;
@@ -128,7 +133,7 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
   border-radius: 1rem;
   outline: none;
 }
-.tile:target .tile-face { background: #f4f8fc; }
+:where(.project-tiles:target .tile--large) .tile-face { background: #f4f8fc; }
 .tile-face:focus-visible, .tile-face:active {
   background: var(--tint);
   text-decoration: none;
@@ -153,13 +158,19 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
   .tile:hover .tile-face { background: var(--tint); text-decoration: none; }
 }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .tile-face { transition: transform .2s ease-out, box-shadow .2s ease-out, background-color .2s ease-out; }
-  .tile:hover .tile-face {
-    transform: perspective(max(1000px, 160vw)) translateY(-4px)
-      rotateX(var(--tilt-x, 4deg)) rotateY(var(--tilt-y, -5deg)) scale(.98);
-    box-shadow: 0 12px 24px #23486930, 0 2px 5px #2348691a;
+  .tile-art {
+    pointer-events: none;
+    transition: transform .2s ease-out, filter .2s ease-out;
+  }
+  .tile-media:hover .tile-art {
+    transform: perspective(1000px) translateY(-4px)
+      rotateX(var(--tilt-x, 4deg)) rotateY(var(--tilt-y, -5deg));
+    filter: drop-shadow(0 10px 12px #23486940);
   }
 }
+.tile--about .tile-face { grid-template-rows: auto auto; }
+.tile--about .tile-label { justify-self: center; }
+.tile--about .tile-meta { justify-content: center; }
 .word-art {
   color: var(--ink);
   font-size: clamp(1.6rem, 4vw, 3.5rem);
@@ -238,11 +249,11 @@ footer {
 .timeline p { margin: 0; }
 
 @media (max-width: 900px) {
-  .wall {
+  .project-tiles {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: min(50vw, 22.5rem);
   }
-  .tile--large { grid-row: span 1; }
+  .tile--large { grid-column: span 2; grid-row: span 1; }
 }
 @media (max-width: 700px) {
   :root { --gutter: 8.2vw; }

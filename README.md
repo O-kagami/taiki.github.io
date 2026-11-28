@@ -18,8 +18,8 @@ After publishing an update, verify that the deployment for that commit succeeded
 
 ## Editing
 
-- `index.html` holds the gallery and experiments. A `.tile` keeps the grid cell in place, while its `.tile-face` displays one screenshot, icon, or wordmark. Link the face directly to the official store, public demo, or repository. Use a non-interactive face with a `coming soon` label for unreleased apps.
-- `assets/` holds the app screenshots and icons. The Color Editorial images come from its public site. The Dobutsu Shogi images show actual output from the public Python project, and its lion mark was drawn for the portfolio.
+- `index.html` holds the gallery and experiments. Keep each project's tiles in a `.project-tiles` group: lead screenshot first, then the other screenshot and the icon. Link each face directly to the official store, public demo, or repository. Use a non-interactive face with a `coming soon` label for unreleased apps.
+- `assets/` holds the app screenshots and icons. The Color Editorial and Dobutsu Shogi screenshots come from their public websites. The Dobutsu Shogi lion mark was drawn for the portfolio.
 - `about.html` holds the profile and career timeline. Use `datetime="YYYY-MM"` for dated entries and keep the newest entries first.
-- `styles.css` holds the shared layout, typography, and transitions. `tile-motion.js` updates the hovered face's tilt using the fixed grid cell's bounds. The gallery links work without JavaScript, and the animations respect reduced-motion preferences.
+- `styles.css` holds the shared layout, typography, and transitions. `tile-motion.js` uses the fixed `.tile-media` slot to tilt its image without moving the caption. The gallery links work without JavaScript, and the animations respect reduced-motion preferences.
 - Use document-relative paths for links and assets so the site also works from a GitHub Pages repository subdirectory.

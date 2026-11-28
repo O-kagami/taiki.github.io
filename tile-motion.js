@@ -1,34 +1,33 @@
 const canTilt = matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
 const tiltDegrees = fraction => 8 * (2 * Math.max(0, Math.min(fraction, 1)) - 1);
 
-for (const face of document.querySelectorAll(".tile > .tile-face")) {
-  const tile = face.parentElement;
+for (const media of document.querySelectorAll(".tile-media")) {
   let frame = 0;
   let pointer;
 
-  tile.addEventListener("pointermove", event => {
+  media.addEventListener("pointermove", event => {
     if (!canTilt.matches || event.pointerType === "touch") return;
     pointer = event;
     if (frame) return;
 
     frame = requestAnimationFrame(() => {
       frame = 0;
-      // The grid cell stays flat, so its bounds do not change as the card tilts.
-      const { left, top, width, height } = tile.getBoundingClientRect();
+      // Measure the stationary media slot, not the image being transformed.
+      const { left, top, width, height } = media.getBoundingClientRect();
       const x = tiltDegrees((pointer.clientX - left) / width);
       const y = tiltDegrees((pointer.clientY - top) / height);
-      face.style.setProperty("--tilt-x", `${-y}deg`);
-      face.style.setProperty("--tilt-y", `${x}deg`);
+      media.style.setProperty("--tilt-x", `${-y}deg`);
+      media.style.setProperty("--tilt-y", `${x}deg`);
     });
   }, { passive: true });
 
   const reset = () => {
     cancelAnimationFrame(frame);
     frame = 0;
-    face.style.removeProperty("--tilt-x");
-    face.style.removeProperty("--tilt-y");
+    media.style.removeProperty("--tilt-x");
+    media.style.removeProperty("--tilt-y");
   };
-  tile.addEventListener("pointerleave", reset);
-  tile.addEventListener("pointercancel", reset);
+  media.addEventListener("pointerleave", reset);
+  media.addEventListener("pointercancel", reset);
   canTilt.addEventListener("change", reset);
 }

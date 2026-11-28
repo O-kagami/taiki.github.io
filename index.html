@@ -38,148 +38,191 @@
     </svg>
 
     <section class="wall" aria-label="作品ギャラリー">
-      <div class="tile tile--large" id="weather">
-        <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
-          <img class="tile-art" src="./assets/fluent-weather.jpg" width="1200" height="780"
-               alt="天気予報、気温の推移、雨雲レーダーを表示する画面">
-          <span class="tile-label" lang="en">
-            <strong>Fluent Weather App</strong>
-            <span class="tile-meta">
-              <svg role="img" aria-label="Windows"><use href="#icon-windows"/></svg>
-              Microsoft Store <span aria-hidden="true">↗</span>
+      <div class="project-tiles" id="weather" role="group" aria-label="Fluent Weather App">
+        <div class="tile tile--large">
+          <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/fluent-weather.jpg" width="1200" height="780"
+                   alt="天気予報、気温の推移、雨雲レーダーを表示する画面">
             </span>
-          </span>
-        </a>
-      </div>
-      <div class="tile" id="audio">
-        <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
-          <img class="tile-art" src="./assets/audio-tracker.webp" width="640" height="1391"
-               alt="iPhoneで地図と現在の音声出力先を表示する画面">
-          <span class="tile-label" lang="en">
-            <strong>Audio Tracker</strong>
-            <span class="tile-meta">
-              <svg role="img" aria-label="iPhone"><use href="#icon-iphone"/></svg>
-              <svg role="img" aria-label="iPad"><use href="#icon-ipad"/></svg>
-              App Store <span aria-hidden="true">↗</span>
+            <span class="tile-label" lang="en">
+              <strong>Fluent Weather App</strong>
+              <span class="tile-meta">
+                <svg role="img" aria-label="Windows"><use href="#icon-windows"/></svg>
+                Microsoft Store <span aria-hidden="true">↗</span>
+              </span>
             </span>
-          </span>
-        </a>
-      </div>
-      <div class="tile tile--mark">
-        <div class="tile-face">
-          <img class="tile-art" src="./assets/trace-log-icon.png" width="120" height="120" alt="Trace Logのアイコン" loading="lazy">
-          <span class="tile-label" lang="en"><strong>Trace Log</strong><span class="tile-meta">coming soon</span></span>
+          </a>
         </div>
-      </div>
-      <div class="tile tile--mark">
-        <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
-          <img class="tile-art" src="./assets/fluent-weather-icon.png" width="300" height="300" alt="Fluent Weather Appのアイコン" loading="lazy">
-          <span class="tile-label" lang="en">
-            <strong>Fluent Weather App</strong><span class="tile-meta">Microsoft Store <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
-      </div>
-      <div class="tile tile--mark">
-        <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
-          <img class="tile-art" src="./assets/audio-tracker-icon.jpg" width="256" height="256" alt="Audio Trackerのアイコン" loading="lazy">
-          <span class="tile-label" lang="en">
-            <strong>Audio Tracker</strong><span class="tile-meta">App Store <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
+        <div class="tile">
+          <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/fluent-weather-settings.jpg" width="1000" height="633" loading="lazy"
+                   alt="表示言語やテーマ、天気の単位を選べる設定画面">
+            </span>
+            <span class="tile-label" lang="en">
+              <strong>Fluent Weather App</strong><span class="tile-meta">Microsoft Store <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
+        <div class="tile tile--mark">
+          <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/fluent-weather-icon.png" width="300" height="300" alt="Fluent Weather Appのアイコン" loading="lazy">
+            </span>
+            <span class="tile-label" lang="en">
+              <strong>Fluent Weather App</strong><span class="tile-meta">Microsoft Store <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
       </div>
 
-      <div class="tile tile--mark">
-        <a class="tile-face" href="https://my-color-app-inky.vercel.app/">
-          <img class="tile-art" src="./assets/color-editorial-icon.webp" width="288" height="245" alt="絵の具のパレットのアイコン" loading="lazy">
-          <span class="tile-label">
-            <strong lang="en">Color Editorial</strong><span class="tile-meta">診断サイト <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
-      </div>
-      <div class="tile">
-        <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
-          <img class="tile-art" src="./assets/fluent-weather-settings.jpg" width="1000" height="633" loading="lazy"
-               alt="表示言語やテーマ、天気の単位を選べる設定画面">
-          <span class="tile-label" lang="en">
-            <strong>Fluent Weather App</strong><span class="tile-meta">Microsoft Store <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
-      </div>
-      <div class="tile tile--large" id="color">
-        <a class="tile-face" href="https://my-color-app-inky.vercel.app/">
-          <img class="tile-art" src="./assets/color-editorial.jpg" width="1080" height="720" loading="lazy"
-               alt="さまざまな色のカードが並ぶ性格診断サイトのトップ画面">
-          <span class="tile-label">
-            <strong lang="en">Color Editorial</strong><span class="tile-meta">色でわかる性格診断 <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
-      </div>
-      <div class="tile">
-        <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
-          <img class="tile-art" src="./assets/audio-tracker-ipad.webp" width="960" height="1280" loading="lazy"
-               alt="iPadで自動記録、通知、権限を確認する設定画面">
-          <span class="tile-label" lang="en">
-            <strong>Audio Tracker</strong><span class="tile-meta">App Store <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
-      </div>
-      <div class="tile">
-        <a class="tile-face" href="https://my-color-app-inky.vercel.app/diagnosis">
-          <img class="tile-art" src="./assets/color-diagnosis.jpg" width="1080" height="780" loading="lazy"
-               alt="質問ごとにスライダーで回答を選ぶ色の性格診断画面">
-          <span class="tile-label">
-            <strong lang="en">Color Editorial</strong><span class="tile-meta">診断をはじめる <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
+      <div class="project-tiles" id="audio" role="group" aria-label="Audio Tracker">
+        <div class="tile tile--large">
+          <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/audio-tracker.webp" width="640" height="1391" loading="lazy"
+                   alt="iPhoneで地図と現在の音声出力先を表示する画面">
+            </span>
+            <span class="tile-label" lang="en">
+              <strong>Audio Tracker</strong>
+              <span class="tile-meta">
+                <svg role="img" aria-label="iPhone"><use href="#icon-iphone"/></svg>
+                <svg role="img" aria-label="iPad"><use href="#icon-ipad"/></svg>
+                App Store <span aria-hidden="true">↗</span>
+              </span>
+            </span>
+          </a>
+        </div>
+        <div class="tile">
+          <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/audio-tracker-ipad.webp" width="960" height="1280" loading="lazy"
+                   alt="iPadで自動記録、通知、権限を確認する設定画面">
+            </span>
+            <span class="tile-label" lang="en">
+              <strong>Audio Tracker</strong><span class="tile-meta">App Store <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
+        <div class="tile tile--mark">
+          <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/audio-tracker-icon.jpg" width="256" height="256" alt="Audio Trackerのアイコン" loading="lazy">
+            </span>
+            <span class="tile-label" lang="en">
+              <strong>Audio Tracker</strong><span class="tile-meta">App Store <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
       </div>
 
-      <div class="tile tile--large" id="dobutsu">
-        <a class="tile-face" href="https://github.com/O-kagami/DobutsuShogi">
-          <img class="tile-art" src="./assets/dobutsu-board.jpg" width="840" height="650" loading="lazy"
-               alt="どうぶつしょうぎの初期盤面を表示したプログラムの実行結果">
-          <span class="tile-label">
-            <strong>どうぶつしょうぎ</strong><span class="tile-meta" lang="en">GitHub <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
-      </div>
-      <div class="tile tile--large" id="trace">
-        <div class="tile-face">
-          <img class="tile-art" src="./assets/trace-log.jpg" width="640" height="1391" loading="lazy"
-               alt="移動や滞在を地図と一覧で振り返るサンプルタイムライン">
-          <span class="tile-label" lang="en">
-            <strong>Trace Log</strong>
-            <span class="tile-meta">
-              <svg role="img" aria-label="iPhone"><use href="#icon-iphone"/></svg>
-              coming soon
+      <div class="project-tiles" id="trace" role="group" aria-label="Trace Log">
+        <div class="tile tile--large">
+          <div class="tile-face">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/trace-log.jpg" width="640" height="1391" loading="lazy"
+                   alt="移動や滞在を地図と一覧で振り返るサンプルタイムライン">
             </span>
-          </span>
+            <span class="tile-label" lang="en">
+              <strong>Trace Log</strong>
+              <span class="tile-meta">
+                <svg role="img" aria-label="iPhone"><use href="#icon-iphone"/></svg>
+                coming soon
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="tile">
+          <div class="tile-face">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/trace-log-record.jpg" width="640" height="1391" loading="lazy"
+                   alt="移動の記録を始める画面">
+            </span>
+            <span class="tile-label" lang="en"><strong>Trace Log</strong><span class="tile-meta">coming soon</span></span>
+          </div>
+        </div>
+        <div class="tile tile--mark">
+          <div class="tile-face">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/trace-log-icon.png" width="120" height="120" alt="Trace Logのアイコン" loading="lazy">
+            </span>
+            <span class="tile-label" lang="en"><strong>Trace Log</strong><span class="tile-meta">coming soon</span></span>
+          </div>
         </div>
       </div>
-      <div class="tile">
-        <div class="tile-face">
-          <img class="tile-art" src="./assets/trace-log-record.jpg" width="640" height="1391" loading="lazy"
-               alt="移動の記録を始める画面">
-          <span class="tile-label" lang="en"><strong>Trace Log</strong><span class="tile-meta">coming soon</span></span>
+
+      <div class="project-tiles" id="color" role="group" aria-label="Color Editorial">
+        <div class="tile tile--large">
+          <a class="tile-face" href="https://my-color-app-inky.vercel.app/">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/color-editorial.jpg" width="1080" height="720" loading="lazy"
+                   alt="さまざまな色のカードが並ぶ性格診断サイトのトップ画面">
+            </span>
+            <span class="tile-label">
+              <strong lang="en">Color Editorial</strong><span class="tile-meta">色でわかる性格診断 <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
+        <div class="tile">
+          <a class="tile-face" href="https://my-color-app-inky.vercel.app/diagnosis">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/color-diagnosis.jpg" width="1080" height="780" loading="lazy"
+                   alt="質問ごとにスライダーで回答を選ぶ色の性格診断画面">
+            </span>
+            <span class="tile-label">
+              <strong lang="en">Color Editorial</strong><span class="tile-meta">診断をはじめる <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
+        <div class="tile tile--mark">
+          <a class="tile-face" href="https://my-color-app-inky.vercel.app/">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/color-editorial-icon.webp" width="288" height="245" alt="絵の具のパレットのアイコン" loading="lazy">
+            </span>
+            <span class="tile-label">
+              <strong lang="en">Color Editorial</strong><span class="tile-meta">診断サイト <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
         </div>
       </div>
-      <div class="tile">
-        <a class="tile-face" href="https://github.com/O-kagami/DobutsuShogi">
-          <img class="tile-art" src="./assets/dobutsu-analysis.jpg" width="840" height="650" loading="lazy"
-               alt="どうぶつしょうぎの局面解析と、AIが推奨する棋譜の実行結果">
-          <span class="tile-label">
-            <strong>どうぶつしょうぎ</strong><span class="tile-meta" lang="en">GitHub <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
+
+      <div class="project-tiles" id="dobutsu" role="group" aria-label="どうぶつしょうぎ">
+        <div class="tile tile--large">
+          <a class="tile-face" href="https://dobutsushogi.onrender.com/">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/dobutsu-board.jpg" width="880" height="935" loading="lazy"
+                   alt="ブラウザ版どうぶつしょうぎの初期盤面と、勝利条件・駒の動きの説明">
+            </span>
+            <span class="tile-label">
+              <strong>どうぶつしょうぎ</strong><span class="tile-meta">ブラウザで遊ぶ <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
+        <div class="tile">
+          <a class="tile-face" href="https://dobutsushogi.onrender.com/">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/dobutsu-selection.jpg" width="244" height="412" loading="lazy"
+                   alt="ライオンの駒を選択し、移動できるマスが表示された盤面">
+            </span>
+            <span class="tile-label">
+              <strong>どうぶつしょうぎ</strong><span class="tile-meta">ブラウザで遊ぶ <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
+        <div class="tile tile--mark">
+          <a class="tile-face" href="https://dobutsushogi.onrender.com/">
+            <span class="tile-media">
+              <img class="tile-art" src="./assets/dobutsu-mark.svg" width="160" height="160" alt="ライオンの駒をモチーフにしたマーク" loading="lazy">
+            </span>
+            <span class="tile-label">
+              <strong>どうぶつしょうぎ</strong><span class="tile-meta">ブラウザで遊ぶ <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+        </div>
       </div>
-      <div class="tile tile--mark">
-        <a class="tile-face" href="https://github.com/O-kagami/DobutsuShogi">
-          <img class="tile-art" src="./assets/dobutsu-mark.svg" width="160" height="160" alt="ライオンの駒をモチーフにしたマーク" loading="lazy">
-          <span class="tile-label">
-            <strong>どうぶつしょうぎ</strong><span class="tile-meta" lang="en">GitHub <span aria-hidden="true">↗</span></span>
-          </span>
-        </a>
-      </div>
-      <div class="tile tile--mark">
+
+      <div class="tile tile--about">
         <a class="tile-face" href="./about.html" lang="en">
           <span class="word-art" aria-hidden="true">hello.</span>
           <span class="tile-label"><strong>About me</strong><span class="tile-meta">Career <span aria-hidden="true">↗</span></span></span>
