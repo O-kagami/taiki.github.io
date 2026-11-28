@@ -1,6 +1,6 @@
 # taiki.
 
-A personal portfolio, built as a dependency-free static site (HTML and CSS).
+A dependency-free static portfolio using HTML, CSS, and a small script for pointer-driven tile motion.
 
 ## Design
 
@@ -18,8 +18,8 @@ After publishing an update, verify that the deployment for that commit succeeded
 
 ## Editing
 
-- `index.html` holds the gallery, project notes, and experiments. Each tile shows one screenshot, app icon, or portfolio wordmark. Project tiles jump to the corresponding project note rather than opening an image viewer.
-- `assets/` holds the app screenshots and icons from the Microsoft Store, App Store, and Trace Log's sample and simulator screens. The HOKUDAI GUIDE images were captured from its public GitHub source, and the おでかけノート images from its public demo. The two web projects use typographic wordmarks in the gallery.
-- Use a `.project-action` link to the official store, public demo, or repository. While an app is not public, show `coming soon` as a non-interactive `.project-status` instead of a support or store link.
+- `index.html` holds the gallery and experiments. A `.tile` keeps the grid cell in place, while its `.tile-face` displays one screenshot, icon, or wordmark. Link the face directly to the official store, public demo, or repository. Use a non-interactive face with a `coming soon` label for unreleased apps.
+- `assets/` holds the app screenshots and icons. The Color Editorial images come from its public site. The Dobutsu Shogi images show actual output from the public Python project, and its lion mark was drawn for the portfolio.
 - `about.html` holds the profile and career timeline. Use `datetime="YYYY-MM"` for dated entries and keep the newest entries first.
-- `styles.css` holds the shared layout and typography. Use document-relative paths for links and assets so the site also works from a GitHub Pages repository subdirectory.
+- `styles.css` holds the shared layout, typography, and transitions. `tile-motion.js` updates the hovered face's tilt using the fixed grid cell's bounds. The gallery links work without JavaScript, and the animations respect reduced-motion preferences.
+- Use document-relative paths for links and assets so the site also works from a GitHub Pages repository subdirectory.

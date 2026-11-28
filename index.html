@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Taiki Kojima — a collection of personal projects, experiments and notes.">
+<meta name="description" content="Taiki Kojima — a collection of personal projects and experiments.">
 <meta name="theme-color" content="#ffffff">
 <title>taiki — personal portfolio</title>
 <link rel="stylesheet" href="./styles.css">
+<script src="./tile-motion.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#works">作品一覧へ移動</a>
@@ -22,171 +23,167 @@
   </header>
 
   <main id="works" tabindex="-1">
+    <svg class="icon-library" width="0" height="0" aria-hidden="true">
+      <symbol id="icon-windows" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/>
+      </symbol>
+      <symbol id="icon-iphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+        <rect x="6.5" y="2" width="11" height="20" rx="2.25"/>
+        <path d="M10.5 5h3"/>
+      </symbol>
+      <symbol id="icon-ipad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+        <rect x="3.5" y="2" width="17" height="20" rx="2.25"/>
+        <path d="M10.5 19h3"/>
+      </symbol>
+    </svg>
+
     <section class="wall" aria-label="作品ギャラリー">
-      <a class="tile tile--large" href="#weather">
-        <img src="./assets/fluent-weather.jpg" width="1200" height="780"
-             alt="天気予報、気温の推移、雨雲レーダーを表示する画面">
-        <span class="tile-label" lang="en">Fluent Weather App / 01</span>
-      </a>
-      <a class="tile" href="#audio">
-        <img src="./assets/audio-tracker.webp" width="640" height="1391"
-             alt="iPhoneで地図と現在の音声出力先を表示する画面">
-        <span class="tile-label" lang="en">Audio Tracker / 01</span>
-      </a>
-      <a class="tile" href="#trace">
-        <img src="./assets/trace-log.jpg" width="640" height="1391"
-             alt="移動や滞在を地図と一覧で振り返るサンプルタイムライン">
-        <span class="tile-label" lang="en">Trace Log / 01</span>
-      </a>
-      <a class="tile tile--mark" href="#weather">
-        <img src="./assets/fluent-weather-icon.png" width="300" height="300" alt="" loading="lazy">
-        <span class="tile-label" lang="en">Fluent Weather App / icon</span>
-      </a>
-      <a class="tile tile--mark" href="#audio">
-        <img src="./assets/audio-tracker-icon.jpg" width="256" height="256" alt="" loading="lazy">
-        <span class="tile-label" lang="en">Audio Tracker / icon</span>
-      </a>
-
-      <a class="tile tile--mark" href="#hokudai-guide">
-        <span class="word-art" lang="en" aria-hidden="true">
-          HOKUDAI<br>GUIDE<small>UNOFFICIAL CAMPUS GUIDE</small>
-        </span>
-        <span class="tile-label" lang="en">HOKUDAI GUIDE / wordmark</span>
-      </a>
-      <a class="tile" href="#weather">
-        <img src="./assets/fluent-weather-settings.jpg" width="1000" height="633" loading="lazy"
-             alt="表示言語やテーマ、天気の単位を選べる設定画面">
-        <span class="tile-label" lang="en">Fluent Weather App / 02</span>
-      </a>
-      <a class="tile tile--large" href="#hokudai-guide">
-        <img src="./assets/hokudai-guide.jpg" width="1120" height="720" loading="lazy"
-             alt="「北大を歩く。」の見出しとキャンパスのイラストがあるトップ画面">
-        <span class="tile-label" lang="en">HOKUDAI GUIDE / 01</span>
-      </a>
-      <a class="tile tile--mark" href="#trace">
-        <img src="./assets/trace-log-icon.png" width="120" height="120" alt="" loading="lazy">
-        <span class="tile-label" lang="en">Trace Log / icon</span>
-      </a>
-      <a class="tile" href="#audio">
-        <img src="./assets/audio-tracker-ipad.webp" width="960" height="1280" loading="lazy"
-             alt="iPadで自動記録、通知、権限を確認する設定画面">
-        <span class="tile-label" lang="en">Audio Tracker / 02</span>
-      </a>
-
-      <a class="tile tile--large" href="#odekake">
-        <img src="./assets/odekake.jpg" width="1120" height="720" loading="lazy"
-             alt="行き先の選択と持ち物チェックができるパソコンでの画面">
-        <span class="tile-label">おでかけノート / 01</span>
-      </a>
-      <a class="tile tile--mark" href="#odekake">
-        <span class="word-art word-art--odekake" aria-hidden="true">
-          おでかけ<br>ノート<small lang="en">ODEKAKE NOTE</small>
-        </span>
-        <span class="tile-label">おでかけノート / ロゴ</span>
-      </a>
-      <a class="tile" href="#hokudai-guide">
-        <img src="./assets/hokudai-campuses.jpg" width="1120" height="682" loading="lazy"
-             alt="札幌と函館のキャンパスを紹介する画面">
-        <span class="tile-label" lang="en">HOKUDAI GUIDE / 02</span>
-      </a>
-      <a class="tile" href="#trace">
-        <img src="./assets/trace-log-record.jpg" width="640" height="1391" loading="lazy"
-             alt="移動の記録を始める画面">
-        <span class="tile-label" lang="en">Trace Log / 02</span>
-      </a>
-      <a class="tile" href="#odekake">
-        <img src="./assets/odekake-mobile.jpg" width="440" height="760" loading="lazy"
-             alt="スマートフォンで持ち物にチェックを入れた画面">
-        <span class="tile-label">おでかけノート / 02</span>
-      </a>
-      <a class="tile tile--mark" href="./about.html">
-        <span class="word-art word-art--about" lang="en" aria-hidden="true">
-          hello.<small>ABOUT ME ↗</small>
-        </span>
-        <span class="tile-label" lang="en">About me</span>
-      </a>
-    </section>
-
-    <section class="content-section" id="project-notes" aria-labelledby="projects-title">
-      <h2 class="section-label" id="projects-title" lang="en">project notes.</h2>
-      <div class="project-list">
-        <article class="project" id="weather" aria-labelledby="weather-title" tabindex="-1">
-          <div class="project-platforms" lang="en">
-            <svg viewBox="0 0 24 24" role="img" fill="currentColor">
-              <title>Windows</title>
-              <path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/>
-            </svg>
-          </div>
-          <h3 id="weather-title" lang="en">Fluent Weather App</h3>
-          <p>天気予報や気温の推移、雨雲レーダーをひとつの画面で確認できる、Windows向けの天気アプリ。</p>
-          <div class="project-links">
-            <a class="project-action" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP" lang="en">
+      <div class="tile tile--large" id="weather">
+        <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
+          <img class="tile-art" src="./assets/fluent-weather.jpg" width="1200" height="780"
+               alt="天気予報、気温の推移、雨雲レーダーを表示する画面">
+          <span class="tile-label" lang="en">
+            <strong>Fluent Weather App</strong>
+            <span class="tile-meta">
+              <svg role="img" aria-label="Windows"><use href="#icon-windows"/></svg>
               Microsoft Store <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="project" id="audio" aria-labelledby="audio-title" tabindex="-1">
-          <div class="project-platforms" lang="en">
-            <svg viewBox="0 0 24 24" role="img" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-              <title>iPhone</title>
-              <rect x="6.5" y="2" width="11" height="20" rx="2.25"/>
-              <path d="M10.5 5h3"/>
-            </svg>
-            <svg viewBox="0 0 24 24" role="img" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-              <title>iPad</title>
-              <rect x="3.5" y="2" width="17" height="20" rx="2.25"/>
-              <path d="M10.5 19h3"/>
-            </svg>
-          </div>
-          <h3 id="audio-title" lang="en">Audio Tracker</h3>
-          <p>イヤホンやスピーカーの接続履歴を地図とタイムラインで振り返るアプリ。</p>
-          <div class="project-links">
-            <a class="project-action" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273" lang="en">
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="tile" id="audio">
+        <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
+          <img class="tile-art" src="./assets/audio-tracker.webp" width="640" height="1391"
+               alt="iPhoneで地図と現在の音声出力先を表示する画面">
+          <span class="tile-label" lang="en">
+            <strong>Audio Tracker</strong>
+            <span class="tile-meta">
+              <svg role="img" aria-label="iPhone"><use href="#icon-iphone"/></svg>
+              <svg role="img" aria-label="iPad"><use href="#icon-ipad"/></svg>
               App Store <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="tile tile--mark">
+        <div class="tile-face">
+          <img class="tile-art" src="./assets/trace-log-icon.png" width="120" height="120" alt="Trace Logのアイコン" loading="lazy">
+          <span class="tile-label" lang="en"><strong>Trace Log</strong><span class="tile-meta">coming soon</span></span>
+        </div>
+      </div>
+      <div class="tile tile--mark">
+        <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
+          <img class="tile-art" src="./assets/fluent-weather-icon.png" width="300" height="300" alt="Fluent Weather Appのアイコン" loading="lazy">
+          <span class="tile-label" lang="en">
+            <strong>Fluent Weather App</strong><span class="tile-meta">Microsoft Store <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+      <div class="tile tile--mark">
+        <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
+          <img class="tile-art" src="./assets/audio-tracker-icon.jpg" width="256" height="256" alt="Audio Trackerのアイコン" loading="lazy">
+          <span class="tile-label" lang="en">
+            <strong>Audio Tracker</strong><span class="tile-meta">App Store <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
 
-        <article class="project" id="trace" aria-labelledby="trace-title" tabindex="-1">
-          <div class="project-platforms" lang="en">
-            <svg viewBox="0 0 24 24" role="img" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-              <title>iPhone</title>
-              <rect x="6.5" y="2" width="11" height="20" rx="2.25"/>
-              <path d="M10.5 5h3"/>
-            </svg>
-          </div>
-          <h3 id="trace-title" lang="en">Trace Log</h3>
-          <p>歩いた道や立ち寄った場所、写真や曲を、一日のタイムラインで振り返るアプリ。</p>
-          <div class="project-links">
-            <span class="project-status" lang="en">coming soon</span>
-          </div>
-        </article>
+      <div class="tile tile--mark">
+        <a class="tile-face" href="https://my-color-app-inky.vercel.app/">
+          <img class="tile-art" src="./assets/color-editorial-icon.webp" width="288" height="245" alt="絵の具のパレットのアイコン" loading="lazy">
+          <span class="tile-label">
+            <strong lang="en">Color Editorial</strong><span class="tile-meta">診断サイト <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+      <div class="tile">
+        <a class="tile-face" href="https://apps.microsoft.com/detail/9mz2vc02xdx9?hl=ja-JP&amp;gl=JP">
+          <img class="tile-art" src="./assets/fluent-weather-settings.jpg" width="1000" height="633" loading="lazy"
+               alt="表示言語やテーマ、天気の単位を選べる設定画面">
+          <span class="tile-label" lang="en">
+            <strong>Fluent Weather App</strong><span class="tile-meta">Microsoft Store <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+      <div class="tile tile--large" id="color">
+        <a class="tile-face" href="https://my-color-app-inky.vercel.app/">
+          <img class="tile-art" src="./assets/color-editorial.jpg" width="1080" height="720" loading="lazy"
+               alt="さまざまな色のカードが並ぶ性格診断サイトのトップ画面">
+          <span class="tile-label">
+            <strong lang="en">Color Editorial</strong><span class="tile-meta">色でわかる性格診断 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+      <div class="tile">
+        <a class="tile-face" href="https://apps.apple.com/jp/app/audio-tracker/id6833750273">
+          <img class="tile-art" src="./assets/audio-tracker-ipad.webp" width="960" height="1280" loading="lazy"
+               alt="iPadで自動記録、通知、権限を確認する設定画面">
+          <span class="tile-label" lang="en">
+            <strong>Audio Tracker</strong><span class="tile-meta">App Store <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+      <div class="tile">
+        <a class="tile-face" href="https://my-color-app-inky.vercel.app/diagnosis">
+          <img class="tile-art" src="./assets/color-diagnosis.jpg" width="1080" height="780" loading="lazy"
+               alt="質問ごとにスライダーで回答を選ぶ色の性格診断画面">
+          <span class="tile-label">
+            <strong lang="en">Color Editorial</strong><span class="tile-meta">診断をはじめる <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
 
-        <article class="project" id="hokudai-guide" aria-labelledby="hokudai-guide-title" tabindex="-1">
-          <span class="section-label" lang="en">Web / Campus guide</span>
-          <h3 id="hokudai-guide-title" lang="en">HOKUDAI GUIDE</h3>
-          <p>北海道大学の歴史や、札幌・函館キャンパスの見どころを紹介する非公式ガイド。</p>
-          <div class="project-links">
-            <a class="project-action" href="https://github.com/O-kagami/hokudai-guide" lang="en">
-              GitHub <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="project" id="odekake" aria-labelledby="odekake-title" tabindex="-1">
-          <span class="section-label" lang="en">Web / Learning</span>
-          <h3 id="odekake-title">おでかけノート</h3>
-          <p>行き先を選んで持ち物をチェックする小さなWebアプリ。初心者向けAIアプリ制作講座の公開教材です。</p>
-          <div class="project-links">
-            <a class="project-action" href="https://o-kagami.github.io/odekake/">
-              公開デモ <span aria-hidden="true">↗</span>
-            </a>
-            <a class="project-action" href="https://github.com/O-kagami/odekake" lang="en">
-              GitHub <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+      <div class="tile tile--large" id="dobutsu">
+        <a class="tile-face" href="https://github.com/O-kagami/DobutsuShogi">
+          <img class="tile-art" src="./assets/dobutsu-board.jpg" width="840" height="650" loading="lazy"
+               alt="どうぶつしょうぎの初期盤面を表示したプログラムの実行結果">
+          <span class="tile-label">
+            <strong>どうぶつしょうぎ</strong><span class="tile-meta" lang="en">GitHub <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+      <div class="tile tile--large" id="trace">
+        <div class="tile-face">
+          <img class="tile-art" src="./assets/trace-log.jpg" width="640" height="1391" loading="lazy"
+               alt="移動や滞在を地図と一覧で振り返るサンプルタイムライン">
+          <span class="tile-label" lang="en">
+            <strong>Trace Log</strong>
+            <span class="tile-meta">
+              <svg role="img" aria-label="iPhone"><use href="#icon-iphone"/></svg>
+              coming soon
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="tile-face">
+          <img class="tile-art" src="./assets/trace-log-record.jpg" width="640" height="1391" loading="lazy"
+               alt="移動の記録を始める画面">
+          <span class="tile-label" lang="en"><strong>Trace Log</strong><span class="tile-meta">coming soon</span></span>
+        </div>
+      </div>
+      <div class="tile">
+        <a class="tile-face" href="https://github.com/O-kagami/DobutsuShogi">
+          <img class="tile-art" src="./assets/dobutsu-analysis.jpg" width="840" height="650" loading="lazy"
+               alt="どうぶつしょうぎの局面解析と、AIが推奨する棋譜の実行結果">
+          <span class="tile-label">
+            <strong>どうぶつしょうぎ</strong><span class="tile-meta" lang="en">GitHub <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+      <div class="tile tile--mark">
+        <a class="tile-face" href="https://github.com/O-kagami/DobutsuShogi">
+          <img class="tile-art" src="./assets/dobutsu-mark.svg" width="160" height="160" alt="ライオンの駒をモチーフにしたマーク" loading="lazy">
+          <span class="tile-label">
+            <strong>どうぶつしょうぎ</strong><span class="tile-meta" lang="en">GitHub <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+      <div class="tile tile--mark">
+        <a class="tile-face" href="./about.html" lang="en">
+          <span class="word-art" aria-hidden="true">hello.</span>
+          <span class="tile-label"><strong>About me</strong><span class="tile-meta">Career <span aria-hidden="true">↗</span></span></span>
+        </a>
       </div>
     </section>
 
