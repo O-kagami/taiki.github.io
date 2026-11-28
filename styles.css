@@ -179,17 +179,7 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
   line-height: 1;
 }
 
-.content-section { padding: clamp(2.5rem, 6vw, 5rem) var(--gutter); }
 h3 { color: var(--focus); line-height: 1.35; }
-.experiment-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-  gap: 1.5rem 2.5rem;
-  max-width: 56rem;
-  margin-top: 1.25rem;
-}
-.experiment-list h3 { margin: 0 0 .5rem; }
-.experiment-list p { margin: 0; }
 
 footer {
   display: flex;

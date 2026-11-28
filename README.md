@@ -18,7 +18,7 @@ After publishing an update, verify that the deployment for that commit succeeded
 
 ## Editing
 
-- `index.html` holds the gallery and experiments. Keep each project's tiles in a `.project-tiles` group: lead screenshot first, then the other screenshot and the icon. Link each face directly to the official store, public demo, or repository. Use a non-interactive face with a `coming soon` label for unreleased apps.
+- `index.html` holds the gallery. Keep each project's tiles in a `.project-tiles` group: lead screenshot first, then the other screenshot and the icon. Link each face directly to the official store, public demo, or repository. Use a non-interactive face with a `coming soon` label for unreleased apps.
 - `assets/` holds the app screenshots and icons. The Color Editorial and Dobutsu Shogi screenshots come from their public websites. The Dobutsu Shogi lion mark was drawn for the portfolio.
 - `about.html` holds the profile, career timeline, and numbered Q&A. Keep the timeline in chronological order and use `<time>` only for known dates.
 - `styles.css` holds the shared layout, typography, and transitions. `tile-motion.js` uses the fixed `.tile-media` slot to tilt its image without moving the caption. The gallery links work without JavaScript, and the animations respect reduced-motion preferences.
